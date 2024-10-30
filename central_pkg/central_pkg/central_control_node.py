@@ -265,7 +265,7 @@ class CentralizedController(Node):
 
     def handle_service_request(self, request, response):
         self.get_logger().info(f'Solicitud recibida: {request.data}')
-        # Lógica para procesar la solicitud
+        # Pocesamiento de la solicitud
         response.success = True
         response.message = "Solicitud procesada correctamente"
         self.handle_response(response.success)
@@ -301,39 +301,6 @@ class CentralizedController(Node):
             self.initialized = True
             self.initialized_odom_1 = True
             self.initialized_odom_2 = True
-    
-    #def execute_callback(self, goal_handle):
-    #    self.t = 0.0
-#
-    #    self.u_fb_x = np.zeros([self.D.shape[1],1])
-    #    self.x_c_x = np.zeros([self.A.shape[0],1])
-    #    self.e1_x = np.zeros([self.B.shape[1],1])
-#
-    #    self.u_fb_y = np.zeros([self.D.shape[1],1])
-    #    self.x_c_y = np.zeros([self.A.shape[0],1])
-    #    self.e1_y = np.zeros([self.B.shape[1],1])
-#
-#
-    #    # Starting points
-    #    self.x_rob1 = 0.0 
-    #    self.y_rob1 = 0.0
-    #    self.theta_rob1 = 0.0
-#
-    #    self.x_rob2 = self.ref12x 
-    #    self.y_rob2 = self.ref12y
-    #    self.theta_rob2 = 0.0
-#
-    #    self.phi1 = 0.0
-    #    self.phi2 = self.phi0
-#
-    #    # Boolean initialization
-    #    self.initialized = True
-    #    self.initialized_odom_1 = True
-    #    self.initialized_odom_2 = True
-#
-    #    # Action execution
-    #    goal_handle.succeed()
-    #    return Trajectory.Result()
 
 
     def reference_trajectory(self):
