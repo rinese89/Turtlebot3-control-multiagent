@@ -1,3 +1,11 @@
+Upload nav2_map_server modified to allow namespace
+This package belong to the main package navigation2, which contain all the packages to navigate using the algorithm AMCL. This package, nav2_map_server has been modified to support the namespace in the map frame_id. This modification is to get the parameter "frame_id" from the launch file. So we can choose if we use it or not
+Modified files:
+map_sever.hpp
+map_server.cpp
+
+Original package: https://github.com/ros-navigation/navigation2
+
 # Map Server
 
 The `Map Server` provides maps to the rest of the Nav2 system using both topic and
