@@ -1,3 +1,14 @@
+This package belong to the main package navigation2, which contain all the packages to navigate using the algorithm AMCL. The modifications are just to get the params file to use namespace and to add the option to choose if the user want to use navigation.
+Modified files:
+/launch/
+bringup_launch.py
+localization_launch.py
+
+New additions in:
+/params/
+/urdf/
+
+
 # nav2_bringup
 
 The `nav2_bringup` package is an example bringup system for Nav2 applications.
