@@ -265,13 +265,12 @@ class CentralizedController(Node):
 
     def handle_service_request(self, request, response):
         self.get_logger().info(f'Solicitud recibida: {request.data}')
-        # Pocesamiento de la solicitud
         response.success = True
         response.message = "Solicitud procesada correctamente"
-        self.handle_response(response.success)
+        self.initialization(response.success)
         return response
     
-    def handle_response(self,initialization_flag):
+    def initialization(self,initialization_flag):
         
         if (initialization_flag):
             self.t = 0.0
